@@ -1,0 +1,35 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+li, .circle, .step-text{
+  float: left;
+}
+.circle{
+  width: 33px;
+  line-height: 28px;
+  height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid #ff8e69;
+  color: #ff8e69;
+}
+
+.current{
+  color: #078266 !important;
+}
+
+.step {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+
+.step-text{
+  height: 33px;
+  line-height: 33px;
+  margin-left: 5px;
+}
+

@@ -1,0 +1,97 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.product-list-item {
+  text-align: center;
+  box-shadow: rgba(149, 158, 169, 0.35) 0 4px 10px 0;
+  background-color: #fff;
+
+  &__title {
+    text-transform: $product-item-title-text-transform;
+    font-weight: $product-item-title-font-weight;
+    text-align: center;
+  }
+
+  &__undiscounted_price {
+    text-decoration: line-through;
+    color: $gray;
+    font-size: $small-font-size;
+    font-weight: regular;
+  }
+
+  &__category {
+    color: $product-item-category-color;
+    text-align: left;
+  }
+
+  &__split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__left {
+      display: grid;
+      align-items: end;
+      grid-template-columns: min-content;
+    }
+  }
+
+  &__currency {
+    color: $secondary-color;
+    font-size: 0.75rem;
+    font-weight: $extra-bold-font-weight;
+    text-align: right;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    font-weight: $product-item-price-font-weight;
+    text-align: right;
+  }
+
+  &__image {
+    background-color: #fff;
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    position: relative;
+
+    &__category {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+    img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+
+    @media (max-width: $small-screen) {
+      height: 210px;
+    }
+  }
+
+  &__bottom {
+    padding: 16px;
+  }
+}
+
+button.border-btn {
+  background: transparent;
+  border-radius: 40px;
+  border: 2px solid $primary-color;
+  padding: 0px 16px;
+  height: 32px;
+  box-shadow: none;
+  &:hover {
+    background: $primary-color;
+    & > span {
+      color: $white;
+    }
+  }
+  & > span {
+    color: $primary-color;
+    font-weight: $bold-font-weight;
+    font-size: 0.875rem;
+  }
+  @media (max-width: $small-screen) {
+    padding: 0px 8px;
+  }
+}
